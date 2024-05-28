@@ -44,7 +44,7 @@ while cap.isOpened():
             # Determine if the hand is open
             thumb_tip = hand_landmarks.landmark[mp_hands.HandLandmark.THUMB_TIP]
             index_finger_tip = hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_TIP]
-            distance = ((thumb_tip.x - index_finger_tip.x)*2 + (thumb_tip.y - index_finger_tip.y)2)*0.5
+            distance = ((thumb_tip.x - index_finger_tip.x)**2 + (thumb_tip.y - index_finger_tip.y)**2)**0.5
             hand_side = "Left" if handedness.classification[0].label == "Left" else "Right"
 
             if distance > 0.1:  # Adjust this threshold based on your needs
