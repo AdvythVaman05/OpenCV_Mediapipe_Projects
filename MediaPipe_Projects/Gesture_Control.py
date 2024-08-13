@@ -124,8 +124,6 @@ class HandDetector:
 
         return joints
 
-    def set_system_volume(self, volume_level):
-        pass
 
 def main():
     detector = HandDetector()
